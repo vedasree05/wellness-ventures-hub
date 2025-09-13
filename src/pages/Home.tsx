@@ -25,36 +25,22 @@ const Home = () => {
       ctaText: "Start Practice"
     },
     {
-      title: "Wellness Spa",
-      description: "Rejuvenate your senses with our holistic spa treatments. From therapeutic massages to aromatherapy sessions, experience wellness redefined through expert care and natural healing.",
-      href: "/ventures/wellness-spa",
+      title: "Ayurveda Center",
+      description: "Experience the ancient science of life through personalized Ayurvedic treatments and consultations. Our practitioners offer authentic healing modalities rooted in traditional Indian medicine for complete mind-body balance.",
+      href: "/ventures/ayurveda-center",
       icon: <Heart className="h-6 w-6 text-foreground" />,
-      ctaText: "Book Session"
-    },
-    {
-      title: "Café & Nutrition",
-      description: "Nourish your body with carefully curated organic meals and beverages. Our nutrition experts create menu items that fuel both body and mind for optimal wellness.",
-      href: "/ventures/cafe-nutrition",
-      icon: <Coffee className="h-6 w-6 text-foreground" />,
-      ctaText: "Explore Menu"
+      ctaText: "Book Consultation"
     },
     {
       title: "Dance, Music & Art",
-      description: "Express your creativity through movement, sound, and visual arts. Our programs integrate artistic expression with wellness practices for holistic personal development.",
+      description: "Express your creativity through movement, sound, and visual arts. Our programs integrate artistic expression with wellness practices for holistic personal development and cultural exploration.",
       href: "/ventures/dance-music-art",
       icon: <Music className="h-6 w-6 text-foreground" />,
       ctaText: "Join Classes"
     },
     {
-      title: "Sports & Recreation",
-      description: "Stay active with our diverse range of fitness programs and recreational activities. From group sports to individual training, find your path to physical wellness.",
-      href: "/ventures/sports-recreation",
-      icon: <Dumbbell className="h-6 w-6 text-foreground" />,
-      ctaText: "Get Active"
-    },
-    {
       title: "Startup Accelerator",
-      description: "Launch your wellness venture with our comprehensive accelerator program. We provide mentorship, resources, and community support for emerging entrepreneurs.",
+      description: "Launch your innovative venture with our comprehensive accelerator program. We provide mentorship, funding opportunities, and community support for emerging entrepreneurs in wellness and technology sectors.",
       href: "/ventures/accelerator",
       icon: <Lightbulb className="h-6 w-6 text-foreground" />,
       ctaText: "Apply Now"
@@ -143,8 +129,8 @@ const Home = () => {
               Our Ventures
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Six innovative business ventures designed to accelerate entrepreneurial success. 
-              Each venture embodies our commitment to collaborative growth and sustainable innovation.
+              Four core ventures designed to accelerate entrepreneurial success and holistic growth. 
+              Each venture embodies our commitment to ancient wisdom, creative expression, and innovative business solutions.
             </p>
           </div>
           

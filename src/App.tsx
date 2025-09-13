@@ -6,10 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Yoga from "./pages/ventures/Yoga";
-import WellnessSpa from "./pages/ventures/WellnessSpa";
-import CafeNutrition from "./pages/ventures/CafeNutrition";
+import AyurvedaCenter from "./pages/ventures/AyurvedaCenter";
 import DanceMusicArt from "./pages/ventures/DanceMusicArt";
-import SportsRecreation from "./pages/ventures/SportsRecreation";
 import Accelerator from "./pages/ventures/Accelerator";
 import NotFound from "./pages/NotFound";
 
@@ -25,10 +23,8 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/ventures/yoga" element={<Yoga />} />
-          <Route path="/ventures/wellness-spa" element={<WellnessSpa />} />
-          <Route path="/ventures/cafe-nutrition" element={<CafeNutrition />} />
+          <Route path="/ventures/ayurveda-center" element={<AyurvedaCenter />} />
           <Route path="/ventures/dance-music-art" element={<DanceMusicArt />} />
-          <Route path="/ventures/sports-recreation" element={<SportsRecreation />} />
           <Route path="/ventures/accelerator" element={<Accelerator />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
