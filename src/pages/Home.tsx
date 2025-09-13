@@ -62,10 +62,10 @@ const Home = () => {
   ];
 
   const principles = [
-    { text: "Seeking - Continuous exploration of wellness practices", icon: <CheckCircle className="h-5 w-5 text-primary" /> },
-    { text: "Observing - Mindful awareness of mind-body connections", icon: <CheckCircle className="h-5 w-5 text-primary" /> },
-    { text: "Contemplating - Deep reflection on personal growth", icon: <CheckCircle className="h-5 w-5 text-primary" /> },
-    { text: "Harnessing - Applying wisdom for transformative results", icon: <CheckCircle className="h-5 w-5 text-primary" /> }
+    { text: "Seeking - Continuous exploration of market opportunities", icon: <CheckCircle className="h-5 w-5 text-primary" /> },
+    { text: "Observing - Strategic analysis of industry trends and needs", icon: <CheckCircle className="h-5 w-5 text-primary" /> },
+    { text: "Contemplating - Deep reflection on innovative solutions", icon: <CheckCircle className="h-5 w-5 text-primary" /> },
+    { text: "Harnessing - Executing ideas for scalable business impact", icon: <CheckCircle className="h-5 w-5 text-primary" /> }
   ];
 
   return (
@@ -86,13 +86,13 @@ const Home = () => {
             <h1 className="text-5xl md:text-7xl font-lora font-bold">
               The10YEC Ventures
               <span className="block text-3xl md:text-4xl text-primary mt-4">
-                The House of Wellness
+                The House of Innovation
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Integrating Yoga and Entrepreneurship for Excellence through our SOCH methodology. 
-              Discover holistic wellness experiences that transform mind, body, and business.
+              Empowering entrepreneurs through our SOCH methodology and collaborative ecosystem. 
+              Transform ideas into impactful ventures that drive innovation and community growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -118,9 +118,9 @@ const Home = () => {
               Our Mission
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Through Minimum Viable Learning (MVL), we create transformative experiences that bridge 
-              ancient wisdom with modern innovation. Our SOCH methodology guides every venture, 
-              ensuring authentic growth and sustainable wellness.
+              Through Minimum Viable Learning (MVL), we accelerate startup success and foster 
+              collaborative innovation. Our SOCH methodology guides every venture, 
+              ensuring sustainable growth and meaningful impact in the entrepreneurial ecosystem.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
@@ -143,8 +143,8 @@ const Home = () => {
               Our Ventures
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Six integrated wellness experiences designed to nurture every aspect of your being. 
-              Each venture embodies our commitment to holistic growth and sustainable practices.
+              Six innovative business ventures designed to accelerate entrepreneurial success. 
+              Each venture embodies our commitment to collaborative growth and sustainable innovation.
             </p>
           </div>
           
@@ -157,15 +157,15 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 gradient-wellness">
+      <section className="py-20 gradient-innovation">
         <div className="container text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-lora font-bold">
-              Begin Your Wellness Journey
+              Launch Your Innovation Journey
             </h2>
             <p className="text-xl leading-relaxed">
-              Ready to transform your life through our integrated approach to wellness and entrepreneurship? 
-              Join our community and discover the power of SOCH.
+              Ready to transform your ideas into impactful ventures? 
+              Join our entrepreneurial ecosystem and harness the power of collaborative innovation.
             </p>
             <Button size="lg" variant="default" asChild>
               <Link to="/contact" className="flex items-center">

@@ -4,53 +4,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* YEC House of Wellness Design System */
+/* YEC Entrepreneurial & Collaborative Design System */
 
 @layer base {
   :root {
-    /* Wellness Color Palette */
-    --background: 45 20% 98%;
-    --foreground: 160 15% 15%;
+    /* Professional Business Palette */
+    --background: 210 20% 98%;
+    --foreground: 210 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 160 15% 15%;
+    --card-foreground: 210 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 15% 15%;
+    --popover-foreground: 210 15% 15%;
 
-    /* Sage Green Primary */
-    --primary: 140 35% 55%;
+    /* Deep Blue Primary - Trust & Innovation */
+    --primary: 210 100% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-soft: 140 25% 85%;
-    --primary-dark: 140 40% 35%;
+    --primary-soft: 210 50% 85%;
+    --primary-dark: 210 85% 35%;
 
-    /* Warm Beige Secondary */
-    --secondary: 35 25% 88%;
-    --secondary-foreground: 160 15% 15%;
-    --secondary-dark: 35 30% 75%;
+    /* Modern Gray Secondary - Professionalism */
+    --secondary: 215 15% 92%;
+    --secondary-foreground: 210 15% 15%;
+    --secondary-dark: 215 20% 85%;
 
-    /* Soft Lavender Accent */
-    --accent: 265 20% 85%;
-    --accent-foreground: 160 15% 15%;
-    --accent-soft: 265 15% 92%;
+    /* Vibrant Orange Accent - Energy & Growth */
+    --accent: 25 95% 65%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 25 80% 90%;
 
-    --muted: 45 15% 95%;
-    --muted-foreground: 160 10% 45%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 10% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 140 15% 88%;
-    --input: 140 15% 88%;
-    --ring: 140 35% 55%;
+    --border: 215 15% 88%;
+    --input: 215 15% 88%;
+    --ring: 210 100% 55%;
 
-    /* Wellness Gradients */
+    /* Business Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
     --gradient-soft: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
-    --gradient-wellness: linear-gradient(45deg, hsl(var(--primary-soft)), hsl(var(--accent-soft)));
+    --gradient-innovation: linear-gradient(45deg, hsl(var(--primary-soft)), hsl(var(--accent-soft)));
 
     /* Shadows & Effects */
-    --shadow-wellness: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-professional: 0 10px 30px -10px hsl(var(--primary) / 0.2);
     --shadow-soft: 0 4px 20px -4px hsl(var(--foreground) / 0.1);
 
     --radius: 1rem;
@@ -124,7 +124,7 @@
     @apply font-lora;
   }
 
-  /* Wellness Component Styles */
+  /* Entrepreneurial Component Styles */
   .gradient-hero {
     background: var(--gradient-hero);
   }
@@ -133,12 +133,12 @@
     background: var(--gradient-soft);
   }
 
-  .gradient-wellness {
-    background: var(--gradient-wellness);
+  .gradient-innovation {
+    background: var(--gradient-innovation);
   }
 
-  .shadow-wellness {
-    box-shadow: var(--shadow-wellness);
+  .shadow-professional {
+    box-shadow: var(--shadow-professional);
   }
 
   .shadow-soft {
