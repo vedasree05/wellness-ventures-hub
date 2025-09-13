@@ -3,7 +3,14 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Yoga from "./pages/ventures/Yoga";
+import WellnessSpa from "./pages/ventures/WellnessSpa";
+import CafeNutrition from "./pages/ventures/CafeNutrition";
+import DanceMusicArt from "./pages/ventures/DanceMusicArt";
+import SportsRecreation from "./pages/ventures/SportsRecreation";
+import Accelerator from "./pages/ventures/Accelerator";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -15,7 +22,14 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/ventures/yoga" element={<Yoga />} />
+          <Route path="/ventures/wellness-spa" element={<WellnessSpa />} />
+          <Route path="/ventures/cafe-nutrition" element={<CafeNutrition />} />
+          <Route path="/ventures/dance-music-art" element={<DanceMusicArt />} />
+          <Route path="/ventures/sports-recreation" element={<SportsRecreation />} />
+          <Route path="/ventures/accelerator" element={<Accelerator />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
