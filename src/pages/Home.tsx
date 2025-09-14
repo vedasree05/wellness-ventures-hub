@@ -10,7 +10,7 @@ import yogaParty from "@/assets/usa_yoga_party.jpeg";
 import yogaNationals from "@/assets/yoga_nationals.jpeg";
 import yecFamily from "@/assets/yecfam.jpeg";
 import triangleImage from "@/assets/Day1-Triangle.jpeg";
-import collageImage from "@/assets/collage.JPG";
+
 import ranchSetup from "@/assets/ranchsetup.jpeg";
 import sessionImage from "@/assets/session.jpeg";
 import walkathonDemo from "@/assets/walkathon_demo.jpeg";
@@ -38,7 +38,7 @@ const Home = () => {
     yogaParty,
     yogaNationals,
     yecFamily,
-    collageImage,
+    
     sessionImage,
     yogaPose,
     ranchSetup,
