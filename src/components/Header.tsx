@@ -13,11 +13,9 @@ const Header = () => {
     { name: "About", href: "/about" },
     { name: "Ventures", href: "/ventures", dropdown: [
       { name: "Yoga & Meditation", href: "/ventures/yoga" },
-      { name: "Wellness Spa", href: "/ventures/wellness-spa" },
-      { name: "Café & Nutrition", href: "/ventures/cafe-nutrition" },
-      { name: "Dance, Music & Art", href: "/ventures/dance-music-art" },
-      { name: "Sports & Recreation", href: "/ventures/sports-recreation" },
+      { name: "Ayurveda/Wellness", href: "/ventures/ayurveda-center" },
       { name: "Startup Accelerator", href: "/ventures/accelerator" },
+      { name: "Event Hosting", href: "/ventures/event-hosting" },
     ]},
     { name: "Partnerships", href: "/partnerships" },
   ];

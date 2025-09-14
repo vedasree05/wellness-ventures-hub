@@ -30,6 +30,14 @@ import {
 } from "lucide-react";
 
 const Home = () => {
+  // Scroll to ventures section function
+  const scrollToVentures = () => {
+    document.getElementById('ventures-section')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
   // Hero carousel images - your beautiful YEC images!
   const heroImages = [
     ranchGreen,
@@ -122,11 +130,9 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" variant="default" asChild>
-                <Link to="/ventures" className="flex items-center">
-                  Explore Ventures
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <Button size="lg" variant="default" onClick={scrollToVentures} className="flex items-center">
+                Explore Ventures
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="hero" asChild>
                 <Link to="/about">Learn About SOCH</Link>
@@ -162,7 +168,7 @@ const Home = () => {
       </section>
 
       {/* Ventures Grid */}
-      <section className="py-20">
+      <section id="ventures-section" className="py-20">
         <div className="container">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl md:text-5xl font-lora font-bold">
