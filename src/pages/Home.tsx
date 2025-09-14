@@ -3,19 +3,49 @@ import { Button } from "@/components/ui/button";
 import VentureCard from "@/components/VentureCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-wellness.jpg";
-import { 
-  Heart, 
-  Coffee, 
-  Music, 
-  Dumbbell, 
-  Lightbulb, 
+import HeroCarousel from "@/components/HeroCarousel";
+import ranchGreen from "@/assets/ranch_green.jpeg";
+import ranchSunset from "@/assets/ranch+sunset.jpeg";
+import yogaParty from "@/assets/usa_yoga_party.jpeg";
+import yogaNationals from "@/assets/yoga_nationals.jpeg";
+import yecFamily from "@/assets/yecfam.jpeg";
+import triangleImage from "@/assets/Day1-Triangle.jpeg";
+import collageImage from "@/assets/collage.JPG";
+import ranchSetup from "@/assets/ranchsetup.jpeg";
+import sessionImage from "@/assets/session.jpeg";
+import walkathonDemo from "@/assets/walkathon_demo.jpeg";
+import walkathonImage from "@/assets/walkathon.jpeg";
+import yogaPose from "@/assets/yogapose.jpeg";
+import {
+  Heart,
+  Coffee,
+  Music,
+  Dumbbell,
+  Lightbulb,
   Flower2,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Handshake,
+  MapPin
 } from "lucide-react";
 
 const Home = () => {
+  // Hero carousel images - your beautiful YEC images!
+  const heroImages = [
+    ranchGreen,
+    ranchSunset,
+    triangleImage,
+    yogaParty,
+    yogaNationals,
+    yecFamily,
+    collageImage,
+    sessionImage,
+    yogaPose,
+    ranchSetup,
+    walkathonImage,
+    walkathonDemo,
+  ];
+
   const ventures = [
     {
       title: "Yoga & Meditation",
@@ -25,18 +55,11 @@ const Home = () => {
       ctaText: "Start Practice"
     },
     {
-      title: "Ayurveda Center",
+      title: "Ayurveda/Wellness",
       description: "Experience the ancient science of life through personalized Ayurvedic treatments and consultations. Our practitioners offer authentic healing modalities rooted in traditional Indian medicine for complete mind-body balance.",
       href: "/ventures/ayurveda-center",
       icon: <Heart className="h-6 w-6 text-foreground" />,
       ctaText: "Book Consultation"
-    },
-    {
-      title: "Dance, Music & Art",
-      description: "Express your creativity through movement, sound, and visual arts. Our programs integrate artistic expression with wellness practices for holistic personal development and cultural exploration.",
-      href: "/ventures/dance-music-art",
-      icon: <Music className="h-6 w-6 text-foreground" />,
-      ctaText: "Join Classes"
     },
     {
       title: "Startup Accelerator",
@@ -44,6 +67,13 @@ const Home = () => {
       href: "/ventures/accelerator",
       icon: <Lightbulb className="h-6 w-6 text-foreground" />,
       ctaText: "Apply Now"
+    },
+    {
+      title: "Event Hosting",
+      description: "Utilize our beautiful venues for your workshops, retreats, corporate events, or wellness sessions. Our spaces provide the perfect environment for meaningful gatherings and transformative experiences.",
+      href: "/ventures/event-hosting",
+      icon: <MapPin className="h-6 w-6 text-foreground" />,
+      ctaText: "Book Venue"
     }
   ];
 
@@ -60,27 +90,37 @@ const Home = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-background/60 backdrop-blur-[2px]" />
-        </div>
+        {/* Background Carousel */}
+        <HeroCarousel
+          images={heroImages}
+          autoplayDelay={6000}
+          opacity={0.5}
+        />
+
+        {/* Optional overlay for better text readability */}
+        <div className="absolute inset-0 bg-background/20" />
         
-        <div className="relative z-10 container text-center">
-          <div className="max-w-4xl mx-auto space-y-8">
+        <div className="relative z-10 container h-full flex flex-col justify-between py-16">
+          {/* Title at the top */}
+          <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-lora font-bold">
               The10YEC Ventures
-              <span className="block text-3xl md:text-4xl text-primary mt-4">
-                The House of Innovation
-              </span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Empowering entrepreneurs through our SOCH methodology and collaborative ecosystem. 
-              Transform ideas into impactful ventures that drive innovation and community growth.
-            </p>
-            
+          </div>
+
+          {/* Subtitle, description and buttons at the bottom */}
+          <div className="text-center space-y-8">
+            <div>
+              <h2 className="text-3xl md:text-4xl text-primary font-lora font-bold mb-6">
+                The House of Innovation
+              </h2>
+
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Empowering entrepreneurs through our SOCH methodology and collaborative ecosystem.
+                Transform ideas into impactful ventures that drive innovation and community growth.
+              </p>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" variant="default" asChild>
                 <Link to="/ventures" className="flex items-center">
@@ -134,7 +174,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {ventures.map((venture, index) => (
               <VentureCard key={index} {...venture} />
             ))}
