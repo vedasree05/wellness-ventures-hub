@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import PartnerCard from "@/components/PartnerCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
@@ -84,6 +85,27 @@ const Partnerships = () => {
       step: "4",
       title: "Ongoing Support",
       description: "We provide continuous support and regular evaluation to ensure partnership success and growth."
+    }
+  ];
+
+  const partners = [
+    {
+      title: "SVYASA",
+      description: "Swami Vivekananda Yoga Anusandhana Samsthana - A premier yoga university and research institution dedicated to the scientific study and practice of yoga for holistic health and wellness.",
+      href: "/partners/svyasa",
+      ctaText: "View Partnership"
+    },
+    {
+      title: "Yoga Bharathi",
+      description: "A leading organization promoting traditional yoga practices and education, committed to spreading authentic yoga knowledge and creating certified yoga instructors worldwide.",
+      href: "/partners/yoga-bharathi",
+      ctaText: "View Partnership"
+    },
+    {
+      title: "Dharma Jagruthi",
+      description: "An organization focused on spiritual awakening and dharmic education, working to preserve ancient wisdom and integrate it with modern lifestyle for holistic development.",
+      href: "/partners/dharma-jagruthi",
+      ctaText: "View Partnership"
     }
   ];
 
@@ -243,6 +265,27 @@ const Partnerships = () => {
                   {process.description}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Partners */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-4xl md:text-5xl font-lora font-bold">
+              Our Partners
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We collaborate with leading organizations that share our vision of integrating
+              ancient wisdom with modern innovation for holistic growth and community impact.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {partners.map((partner, index) => (
+              <PartnerCard key={index} {...partner} />
             ))}
           </div>
         </div>

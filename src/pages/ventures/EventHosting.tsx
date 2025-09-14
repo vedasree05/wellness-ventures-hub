@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import yecCenterImage from "@/assets/yec_center.png";
@@ -199,6 +199,14 @@ const EventHosting = () => {
                     </div>
                   </div>
                 </CardContent>
+                <CardFooter>
+                  <Button className="w-full" asChild>
+                    <Link to="/contact" className="flex items-center justify-center">
+                      Reservation
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>

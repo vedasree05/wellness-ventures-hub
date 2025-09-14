@@ -11,6 +11,9 @@ import AyurvedaCenter from "./pages/ventures/AyurvedaCenter";
 import DanceMusicArt from "./pages/ventures/DanceMusicArt";
 import Accelerator from "./pages/ventures/Accelerator";
 import EventHosting from "./pages/ventures/EventHosting";
+import SVYASA from "./pages/partners/SVYASA";
+import YogaBharathi from "./pages/partners/YogaBharathi";
+import DharmaJagruthi from "./pages/partners/DharmaJagruthi";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +33,9 @@ const App = () => (
           <Route path="/ventures/dance-music-art" element={<DanceMusicArt />} />
           <Route path="/ventures/accelerator" element={<Accelerator />} />
           <Route path="/ventures/event-hosting" element={<EventHosting />} />
+          <Route path="/partners/svyasa" element={<SVYASA />} />
+          <Route path="/partners/yoga-bharathi" element={<YogaBharathi />} />
+          <Route path="/partners/dharma-jagruthi" element={<DharmaJagruthi />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
