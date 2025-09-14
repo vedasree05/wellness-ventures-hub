@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
@@ -13,6 +13,14 @@ interface VentureCardProps {
 }
 
 const VentureCard = ({ title, description, href, icon, image, ctaText = "Learn More" }: VentureCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate(href);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <Card className="group hover:shadow-wellness transition-all duration-300 h-full">
       {image && (
@@ -26,13 +34,13 @@ const VentureCard = ({ title, description, href, icon, image, ctaText = "Learn M
       )}
       
       <CardHeader>
-        <div className="flex items-center space-x-3">
+        <div className="flex items-start space-x-3">
           {icon && (
-            <div className="h-12 w-12 gradient-wellness rounded-lg flex items-center justify-center">
+            <div className="h-12 w-12 gradient-wellness rounded-lg flex items-center justify-center flex-shrink-0">
               {icon}
             </div>
           )}
-          <CardTitle className="text-xl font-lora">{title}</CardTitle>
+          <CardTitle className="text-xl font-lora leading-tight break-words overflow-hidden">{title}</CardTitle>
         </div>
       </CardHeader>
       
@@ -43,11 +51,13 @@ const VentureCard = ({ title, description, href, icon, image, ctaText = "Learn M
       </CardContent>
       
       <CardFooter>
-        <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground" asChild>
-          <Link to={href} className="flex items-center justify-center">
-            {ctaText}
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+        <Button
+          variant="outline"
+          className="w-full group-hover:bg-primary group-hover:text-primary-foreground flex items-center justify-center"
+          onClick={handleClick}
+        >
+          {ctaText}
+          <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
     </Card>

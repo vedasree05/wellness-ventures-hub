@@ -19,6 +19,7 @@ const Header = () => {
       { name: "Sports & Recreation", href: "/ventures/sports-recreation" },
       { name: "Startup Accelerator", href: "/ventures/accelerator" },
     ]},
+    { name: "Partnerships", href: "/partnerships" },
   ];
 
   const isCurrentPath = (path: string) => location.pathname === path;
